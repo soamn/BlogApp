@@ -47,9 +47,9 @@ API Endpoints
 
 *   **Create a new post**
     
-*   jsonCopy code{ "title": "Post Title", "content": "Post Content"}
+*   ` "title": "Post Title", "content": "Post Content"} `
     
-*   jsonCopy code{ "message": "Post created", "post": { "id": 1, "title": "Post Title", "content": "Post Content", "created\_at": "2024-01-01T00:00:00Z" }}
+*   `{ "message": "Post created", "post": { "id": 1, "title": "Post Title", "content": "Post Content", }} `
     
 
 ### GET /api/posts
