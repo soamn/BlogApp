@@ -25,12 +25,44 @@ function FullPost() {
     return <div>Loading...</div>;
   }
 
+  const { title, content } = post;
+
+  const paragraphs = splitContentIntoParagraphs(content);
+
   return (
     <div className="full-post">
-      <h1 className="full-post-title">{post.title}</h1>
-      <p className="full-post-body">{post.content}</p>
+      <h1 className="full-post-title">{title}</h1>
+      {paragraphs.map((para, index) => (
+        <p key={index} className="full-post-body">
+          {para}
+        </p>
+      ))}
     </div>
   );
+}
+
+function splitContentIntoParagraphs(content) {
+  const maxLengths = [500, 700, 1000];
+
+  const paragraphs = [];
+  let startIndex = 0;
+
+  for (let maxLength of maxLengths) {
+    const endIndex = Math.min(startIndex + maxLength, content.length);
+    const segment = content.slice(startIndex, endIndex);
+
+    const lastFullStopIndex = segment.lastIndexOf(".");
+
+    if (lastFullStopIndex !== -1) {
+      paragraphs.push(segment.slice(0, lastFullStopIndex + 1));
+      startIndex += lastFullStopIndex + 1;
+    } else {
+      paragraphs.push(segment);
+      startIndex += segment.length;
+    }
+  }
+
+  return paragraphs;
 }
 
 export default FullPost;

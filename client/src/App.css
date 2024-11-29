@@ -107,9 +107,16 @@ button:hover {
 button:active {
   box-shadow: #333;
 }
-
+.full-post {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  margin: 0 auto;
+  gap: 3rem;
+}
 .full-post-title {
-  font-size: 50px;
+  text-align: center;
+  font-size: 30px;
 }
 .full-post-body {
   font-size: 20px;
