@@ -137,3 +137,12 @@ Troubleshooting
 *   **MySQL Connection Issues**: Ensure that the MySQL server is running and that the credentials in the .env file are correct.
     
 *   **Port Conflicts**: If 3000 is already in use, modify the PORT variable in the .env file.
+
+
+** Deplayment guide **
+On you Aws or server 
+*    Create a Folder by the name of the application ` mkdir MyBlogApp `
+*    `sudo apt update`
+     ` sudo apt install nginx `
+  configure nginx and map your server ip to localhost running app i.e https://localhost:3000
+  You can use pm2 to run your client and server in your server using the above steps to run the application
