@@ -124,9 +124,7 @@ The application uses MySQL to store the blog posts. The app.js file will automat
 Environment Variables
 ---------------------
 
-*   HOST: The host where your MySQL server is located (default: localhost).
-    
-*   USER: The username to access your MySQL server.
+
     
 *   PASSWORD: The password for the MySQL user.
     
