@@ -15,9 +15,7 @@ function FullPost() {
         );
         const data = await response.json();
         setPost(data.post[0]);
-      } catch (error) {
-        console.error("Error fetching the post:", error);
-      }
+      } catch (error) {}
     };
 
     fetchPost();

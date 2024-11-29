@@ -6,8 +6,10 @@ const { describe } = require("node:test");
 describe("POST /api/posts", () => {
   it("should create a new post", async () => {
     const newPost = {
-      title: "Test Post",
-      content: "This is the content of the test post",
+      title:
+        "The Power of Habit: How Small Changes Can Lead to Big Results (test post)",
+      content:
+        "In a world where we are constantly striving for personal growth and success, one key factor often stands out: habit. The things we do every day, often without even thinking about them, have a profound impact on our lives. From the way we manage our time to how we approach our work, our habits shape our reality. But what if we told you that small, intentional changes to your habits could lead to big results?",
     };
 
     const response = await request(app)

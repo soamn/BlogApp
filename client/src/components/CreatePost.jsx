@@ -22,7 +22,7 @@ function CreatePost() {
       .then(() => {
         navigate("/");
       })
-      .catch((error) => console.error("Error creating post:", error));
+      .catch((error) => {});
   };
 
   return (

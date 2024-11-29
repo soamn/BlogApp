@@ -14,7 +14,7 @@ function EditPost() {
         setTitle(data.post[0].title);
         setContent(data.post[0].content);
       })
-      .catch((error) => console.error("Error fetching post:", error));
+      .catch((error) => { });
   }, [id]);
 
   const handleSubmit = (e) => {
@@ -33,7 +33,7 @@ function EditPost() {
       .then(() => {
         navigate("/");
       })
-      .catch((error) => console.error("Error updating post:", error));
+      .catch((error) => { });
   };
 
   return (
