@@ -42,7 +42,7 @@ function FullPost() {
 }
 
 function splitContentIntoParagraphs(content) {
-  const maxLengths = [500, 700, 1000];
+  const maxLengths = [500, 700, content.length];
 
   const paragraphs = [];
   let startIndex = 0;
