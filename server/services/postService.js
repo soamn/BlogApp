@@ -2,7 +2,7 @@ const connection = require("../config/db");
 
 async function createPost(title, content) {
   const sql =
-    "INSERT INTO posts (title, content, created_at) VALUES (?, ?, NOW())";
+    "INSERT INTO blogapp.posts (title, content, created_at) VALUES (?, ?, NOW())";
   const result = connection.query(sql, [title, content]);
   return result.values;
 }

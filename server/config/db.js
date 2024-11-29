@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const connection = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
+  host: "127.0.0.1",
+  user: "root",
   password: process.env.PASSWORD,
 });
 const createDb = `CREATE DATABASE IF NOT EXISTS BlogApp`;

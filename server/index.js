@@ -15,3 +15,5 @@ app.use(express.json());
 const postsRoute = require("./routes/posts-route");
 app.use(postsRoute);
 app.listen(process.env.PORT || 8080, () => {});
+
+module.exports = app;

@@ -6,7 +6,7 @@ const getPost = async (req, res) => {
     const id = req.params.id;
     const post = await postService.getPost(id);
 
-    if (post) {
+    if (post.length > 0) {
       return res.status(200).send({ post });
     } else {
       return res.status(404).send({ error: "Post not found" });
@@ -22,7 +22,6 @@ const getAllPosts = async (req, res) => {
     const posts = await postService.getPosts();
     return res.status(200).send({ posts });
   } catch (error) {
-    console.error(error);
     return res.status(500).send({ error: "Internal Server Error" });
   }
 };
@@ -37,7 +36,6 @@ const createPosts = async (req, res) => {
     const post = await postService.createPost(title, content);
     return res.status(201).send({ message: "Post created", post });
   } catch (error) {
-    console.log(error);
     return res.status(500).send({ error: "Internal Server Error" });
   }
 };
