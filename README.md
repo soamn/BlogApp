@@ -84,6 +84,7 @@ Running the Tests
 -----------------
 
 This project uses **Jest** and **Supertest** to test the API endpoints.
+ ` cd server `
 
 1. `npm install --save-dev jest supertest`
     
